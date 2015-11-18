@@ -56,7 +56,9 @@ public class MainActivity extends ActionBarActivity {
                 String stringResult = String.valueOf(convertedVal);
 
                 txtView.setText(stringResult + " C ");
+// [°C] = ([°F] − 32) × 5⁄9 --> From Fahrenheit to celsius
 
+                // [°F] = [°C] × 9⁄5 + 32  --> From Celsius to Fahrenheit
 
             }
         });

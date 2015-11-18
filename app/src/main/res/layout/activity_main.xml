@@ -13,13 +13,12 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
         android:ems="10"
         android:id="@+id/editText"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="105dp"
-        android:hint="Enter Temperture" />
+        android:hint="Enter Temperature" />
 
     <Button
         android:layout_width="wrap_content"
