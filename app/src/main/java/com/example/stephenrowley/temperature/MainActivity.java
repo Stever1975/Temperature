@@ -17,12 +17,17 @@ public class MainActivity extends ActionBarActivity {
     private Button btnF;
     private Button btnC;
 
+    private EditText txtEntry;
+    private TextView txtView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button btnF = (Button)findViewById(R.id.btnF);
+        txtEntry = (EditText)findViewById(R.id.editText);
+         txtView = (TextView)findViewById(R.id.textView2);
+
         btnF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,6 +41,23 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "So C", Toast.LENGTH_LONG).show();
+                String editTextVal = txtEntry.getText().toString();
+
+
+                double dblEditText = Double.parseDouble(editTextVal);
+
+
+                //String editTextVal = editText.getText().toString();
+                // put the returned value into a variable so we can use it (make things organized)
+                double convertedVal = convertC(dblEditText);
+
+                //use the String.valueOf() method to convert our double value into it's corresponding string format so we can out put it
+
+                String stringResult = String.valueOf(convertedVal);
+
+                txtView.setText(stringResult + " C ");
+
+
             }
         });
     }
@@ -62,4 +84,16 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    public double convertF(double temp){
+
+        return temp;
+    }
+
+    public double convertC(double temp){
+
+        return temp;
+    }
+
 }
